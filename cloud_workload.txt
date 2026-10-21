@@ -1,0 +1,29 @@
+# A small cloud host with 8192 MB of VM memory and a mixed workload of web, cache,
+# database and batch VMs that start and stop in no particular order.
+HEAP 8192
+CREATE web1 512
+CREATE web2 512
+CREATE db1 2048
+CREATE cache1 1024
+CREATE batch1 1536
+CREATE web3 512
+CREATE batch2 1024
+TERMINATE web2
+TERMINATE cache1
+TERMINATE web3
+CREATE web4 768
+CREATE ml1 2048
+TERMINATE batch1
+CREATE cache2 512
+CREATE batch3 1280
+TERMINATE db1
+CREATE db2 3072
+CREATE web5 512
+TERMINATE batch2
+TERMINATE web1
+CREATE ml2 2560
+CREATE web6 256
+CREATE batch4 1792
+TERMINATE ml1
+CREATE db3 2048
+CREATE cache3 768

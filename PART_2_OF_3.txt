@@ -1,0 +1,6 @@
+PART 2 of 3 - VM manager, command interpreter, command-line front end, sample traces, test scripts
+
+Contains: VirtualMachine/VMManager, RunMetrics, CommandProcessor, main.cpp (command-line front end), run_tests.bat / run_tests.sh, all sample traces.
+Needs Part 1 and Part 3 to compile and run.
+
+To get the whole project: extract all three zips into the same folder (they all unpack into HeapTrace/ without overlapping files), then follow README.md (in Part 3).

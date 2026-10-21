@@ -1,0 +1,12 @@
+# Same as worked_example.txt but stops before F, so the final state is exactly the
+# "state before F" of slide 11:
+#   first-fit: 3 free blocks, largest 250 MB, external fragmentation 1 - 250/570 = 56.1%
+#   best-fit : 3 free blocks, largest 300 MB, external fragmentation 1 - 300/570 = 47.4%
+HEAP 1000
+CREATE A 300
+CREATE B 100
+CREATE C 200
+CREATE D 150
+TERMINATE A
+TERMINATE C
+CREATE E 180

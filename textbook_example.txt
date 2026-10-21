@@ -1,0 +1,26 @@
+# Classic textbook placement exercise (cf. Silberschatz, Galvin, Gagne, "Operating
+# System Concepts", contiguous memory allocation): free holes of 100, 500, 200,
+# 300 and 600 MB (in address order), then requests of 212, 417, 112 and 426 MB.
+#   first-fit : rejects R4 (426 MB)  - it consumed the big holes too early
+#   best-fit  : places all four requests
+#   worst-fit : rejects R4 (426 MB)
+# 10 MB separator VMs keep the five holes apart; they are never terminated.
+HEAP 1740
+CREATE h1 100
+CREATE s1 10
+CREATE h2 500
+CREATE s2 10
+CREATE h3 200
+CREATE s3 10
+CREATE h4 300
+CREATE s4 10
+CREATE h5 600
+TERMINATE h1
+TERMINATE h2
+TERMINATE h3
+TERMINATE h4
+TERMINATE h5
+CREATE R1 212
+CREATE R2 417
+CREATE R3 112
+CREATE R4 426

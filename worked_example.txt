@@ -1,0 +1,15 @@
+# Worked example from the Phase-II presentation (slides 10-11): 1000 MB server.
+# After TERMINATE A and C the free holes are 300, 200 and 250 MB (750 MB free).
+# E = 180 MB is placed differently by each strategy, and the next request
+# F = 290 MB then exposes the difference (570 MB are free at that point):
+#   first-fit : E goes into the 300 MB hole -> largest hole left is 250 MB -> F rejected
+#   best-fit  : E goes into the 200 MB hole -> a 300 MB hole survives      -> F placed
+HEAP 1000
+CREATE A 300
+CREATE B 100
+CREATE C 200
+CREATE D 150
+TERMINATE A
+TERMINATE C
+CREATE E 180
+CREATE F 290

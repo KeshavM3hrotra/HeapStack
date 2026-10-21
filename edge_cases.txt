@@ -1,0 +1,26 @@
+# Edge cases: every problem line is reported and skipped, the heap is never corrupted.
+# Valid requests are mixed in so you can see the simulator keeps working.
+HEAP 500
+CREATE web1 200
+create db1 150            # commands are case-insensitive
+CREATE web1 50            # error: a VM named web1 is already running
+CREATE big 600            # rejected: more than the whole server (capacity)
+CREATE exact 150          # exact fit: no split, memory is now 100% used
+CREATE nomore 1           # rejected: nothing is free (capacity)
+TERMINATE nomore          # skipped: nomore was rejected, nothing to release
+TERMINATE ghost           # error: no such VM
+TERMINATE web1
+TERMINATE web1            # error: already terminated
+CREATE web1 100           # a terminated name can be reused
+CREATE bad 0              # error: size must be positive
+CREATE bad -5             # error: not a positive whole number
+CREATE bad 12abc          # error: not a number
+CREATE bad                # error: missing size
+CREATE bad 10 20          # error: too many arguments
+CREATE -x 10              # error: invalid VM name
+FROBNICATE now            # error: unknown command
+STRATEGY clever           # error: unknown strategy
+STRATEGY best             # valid: switch policy at run time
+CREATE tiny 1
+SNAPSHOT
+STATS
