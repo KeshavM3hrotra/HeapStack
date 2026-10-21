@@ -1,0 +1,6 @@
+PART 1 of 3 - Core engine, strategies, C implementation and build system
+
+Contains: MemoryBlock, HeapSimulator (split/coalesce), AllocationStrategy hierarchy, shared types/utilities (C++), the COMPLETE C implementation (c/), build.bat / build.sh / Makefile, docs/DESIGN.md.
+Needs Part 2 and Part 3 to build the C++ program (the C program in c/ is complete by itself: gcc -std=c99 -Ic/include c/src/*.c -o heaptrace_c).
+
+To get the whole project: extract all three zips into the same folder (they all unpack into HeapTrace/ without overlapping files), then follow README.md (in Part 3).

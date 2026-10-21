@@ -1,0 +1,8 @@
+# build output
+bin/*
+!bin/.gitkeep
+
+# runtime output
+*.log
+*.o
+*.exe
